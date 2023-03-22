@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="vboxApp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bars.testjavafx.ContractController">
+    <children>
+        <SplitPane fx:id="scrollOne" focusTraversable="true" prefHeight="568.0" prefWidth="400.0" VBox.vgrow="ALWAYS">
+            <items>
+                <ScrollPane fx:id="scrollTwo" prefHeight="564.0" prefWidth="404.0">
+                    <content>
+                        <AnchorPane id="Content" fx:id="mainAnchor" minHeight="-1.0" minWidth="-1.0" prefHeight="538.0" prefWidth="360.0">
+                            <children>
+                                <Label fx:id="mainLabel" alignment="CENTER" layoutX="-6.0" layoutY="14.0" prefHeight="54.0" prefWidth="408.0" style="&#10;" text="Список договоров" textFill="#575656" wrapText="false">
+                                    <font>
+                                        <Font name="Arial Black" size="30.0" fx:id="x5" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="refreshButton" layoutX="130.0" layoutY="498.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" text="Обновить">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font></Button>
+                                <TableView fx:id="listContracts" layoutX="14.0" layoutY="93.0" prefHeight="405.0" prefWidth="383.0">
+                                    <columns>
+                                        <TableColumn fx:id="numberContract" prefWidth="57.0" text="Номер" />
+                                        <TableColumn fx:id="date" prefWidth="120.0" text="Дата заключения" />
+                                        <TableColumn fx:id="lastUpdate" prefWidth="120.0" text="Дата обновления" />
+                                        <TableColumn fx:id="relevance" prefWidth="85.0" text="Актуальность" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </items>
+        </SplitPane>
+    </children>
+</VBox>
